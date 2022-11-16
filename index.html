@@ -30,11 +30,17 @@
                         </div>
                         <div class="selector">
                             <label for="country">Country:</label>
-                            <select class="form-control btn btn-default" id="country"></select>
+                            <select class="form-control" id="country">
+                                <option value="select">Select</option>
+                            </select>
                             <label for="state">State:</label>
-                            <select class="form-control btn btn-default" id="state"></select>
+                            <select class="form-control" id="state">
+                                <option value="select">Select</option>
+                            </select>
                             <label for="city">City:</label>
-                            <select class="form-control btn btn-default" id="city"></select>
+                            <select class="form-control " id="city">
+                                <option value="select">Select</option>
+                            </select>
                         </div>
                         <div class="uploadinfo">
                             <label for="invoice">Invoice (PDF):</label>
@@ -48,7 +54,9 @@
                             <label for="invoicedate">Invoice Date</label>
                             <input class="form-control" type="date" name="invoicedate"> 
                         </div>
-                        <button class="btn btn-default submitbutton">Submit</button>
+                        <div>
+                            <button class="btn btn-default submitbutton">Submit</button>
+                        </div>
                     </form>
                 </div>
                 <div class="col-xs-3"></div>

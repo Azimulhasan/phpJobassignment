@@ -5,3 +5,4 @@ $(document).ready(function(){
     $(".lower").fadeOut(3000)
     setInterval(()=>$(".main").fadeIn(4000),3000)
 });
+

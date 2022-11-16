@@ -50,6 +50,7 @@ label{
     font-size: 80px;
     
 }
+
 .info, .selector, .uploadinfo{
     display: flex;
     justify-content: space-between;
@@ -59,4 +60,7 @@ label{
     width: min(1000px);
     display: none;
 }
-.submitbutton
+.submitbutton{
+   margin: 0 200px;
+    width: 100px;
+}
