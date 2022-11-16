@@ -1,3 +1,62 @@
-body{
-    background-color:black;
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+body{
+    background-color:rgba(0, 0, 0, 0.977);
+    color:aliceblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    padding: 20px;
+    border: 2px double rgba(255, 255, 255, 0.5);
+    border-radius: 20px 2px 20px 20px
+}
+.form-control{
+    background-color: aliceblue;
+    font-weight: 600;
+    color: black;
+    margin: 0 5px;
+}
+h1{
+    text-align: center;
+}
+label{
+    margin: 10px;
+    white-space: nowrap;
+}
+.upper {
+    overflow: hidden;
+    height: 60px;
+    
+  }
+.lower{ 
+   
+    height: 55px;
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.opening{
+    text-align: center;
+    font-size: 80px;
+    
+}
+.info, .selector, .uploadinfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main{
+    width: min(1000px);
+    display: none;
+}
+.submitbutton

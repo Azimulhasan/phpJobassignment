@@ -6,7 +6,7 @@ Well a php based project
 
 
 
-***Note:***
+***Note***
 - Use of google is allowed but you are not allowed to copy paste the whole code, google is allowed only for syntax referencing.
 - Database has to be created in MySQL and you are free to design the database with your best database designing skills, use of normalisation is preferred and a good choice.
 - Usage of JSON will add additional points.

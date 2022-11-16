@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCclass="form-control" TYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,49 @@
 
 </head>
 <body>
-    
-</body>
+    <div class="animebox">
+        <div class="upper opening">Let's Get You Registered</div>
+        <div class="main container-fluid">
+            <div class="row">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-6 box">
+                    <h1>Form Registration</h1>
+                    <form action="" type="POST" name="submitform">
+                        <div class="info">
+                            <label for="customername">Customer Name:</label>
+                            <input class="form-control" placeholder="Your Name" type="text" name="customername" pattern="[0-9a-zA-Z]">
+                        </div>
+                        <div class="info">
+                            <label for="totalsales">Total Sales:</label>
+                            <input class="form-control" placeholder="Amount" type="text" name="totalsales" pattern="[0-9]">
+                        </div>
+                        <div class="selector">
+                            <label for="country">Country:</label>
+                            <select class="form-control btn btn-default" id="country"></select>
+                            <label for="state">State:</label>
+                            <select class="form-control btn btn-default" id="state"></select>
+                            <label for="city">City:</label>
+                            <select class="form-control btn btn-default" id="city"></select>
+                        </div>
+                        <div class="uploadinfo">
+                            <label for="invoice">Invoice (PDF):</label>
+                            <input type="file" id="invoicefiles" name="invoice" multiple="multiple" />
+                        </div>
+                        <div class="uploadinfo">
+                            <label for="customerpic">Customer Picture (jpg,jpeg,png,etc):</label>
+                            <input type="file" id="customerpic" name="customerpic" />
+                        </div>
+                        <div class="info">
+                            <label for="invoicedate">Invoice Date</label>
+                            <input class="form-control" type="date" name="invoicedate"> 
+                        </div>
+                        <button class="btn btn-default submitbutton">Submit</button>
+                    </form>
+                </div>
+                <div class="col-xs-3"></div>
+            </div>
+        </div>
+        <div class="lower opening"><div class="rotate">Let's Get You Registered</div></div>
+    </div>
+</body> 
 </html>
