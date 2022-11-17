@@ -1,15 +1,15 @@
 <?php
 require_once("./conn.php");
 
-$customername = $_POST["customername"];
-$totalsales = $_POST["totalsales"];
-$country = $_POST["country"];
-$state = $_POST["state"];
-$city = $_POST["city"];
+$customername = $_REQUEST["customername"];
+$totalsales = $_REQUEST["totalsales"];
+$country = $_REQUEST["country"];
+$state = $_REQUEST["state"];
+$city = $_REQUEST["city"];
 
-$target_dir = "uploads/";
-$customerpic = $targer_dir . basename( $_FILES['customerpic']['name']) ;
-$file_type=$_Fcustomerpic['customerpic']['type'];
+$target_dir = "./uploads/";
+$customerpic = $target_dir . basename( $_FILES['customerpic']['name']) ;
+$file_type=$_FILES['customerpic']['type'];
 
 if ($file_type=="image/gif" || $file_type=="image/jpeg"|| $file_type=="image/jpg" || $file_type=="image/png" ) {
     if(move_uploaded_file($_Fcustomerpic['customerpic']['tmp_name'], $customerpic)){
@@ -34,7 +34,7 @@ if ($file_type=="application/pdf") {
     echo "You may only upload PDFs.<br>";
 }
 
-$invoicedate = $_POST['invoicedate'];
+$invoicedate = $_REQUEST['invoicedate'];
 
 
 $sql = "INSERT INTO MyGuests VALUES (".$customername.",".$totalsales.",".$country.",".$state.",".$city.",".$invoice.",".$customerpic.",".$invoicedate.")";

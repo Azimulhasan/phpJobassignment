@@ -20,7 +20,7 @@
                 <div class="col-xs-3"></div>
                 <div class="col-xs-6 box">
                     <h1>Form Registration</h1>
-                    <form action="submit.php" type="POST" name="submitform">
+                    <form action="submit.php" method="POST" name="submitform" enctype="multipart/form-data">
                         <div class="info">
                             <label for="customername">Customer Name:</label>
                             <input class="form-control" placeholder="Your Name" type="text" name="customername" >
@@ -51,7 +51,7 @@
                         </div>
                         <div class="uploadinfo">
                             <label for="invoice">Invoice (PDF):</label>
-                            <input type="file" id="invoicefiles" name="invoice" multiple="multiple" />
+                            <input type="file" id="invoice" name="invoice" multiple="multiple" />
                         </div>
                         <div class="uploadinfo">
                             <label for="customerpic">Customer Picture (jpg,jpeg,png,etc):</label>
