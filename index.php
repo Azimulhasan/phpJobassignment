@@ -12,6 +12,7 @@
 
 </head>
 <body>
+    <?php require_once("./conn.php")?>
     <div class="animebox">
         <div class="upper opening">Let's Get You Registered</div>
         <div class="main container-fluid">
@@ -19,27 +20,33 @@
                 <div class="col-xs-3"></div>
                 <div class="col-xs-6 box">
                     <h1>Form Registration</h1>
-                    <form action="" type="POST" name="submitform">
+                    <form action="submit.php" type="POST" name="submitform">
                         <div class="info">
                             <label for="customername">Customer Name:</label>
-                            <input class="form-control" placeholder="Your Name" type="text" name="customername" pattern="[0-9a-zA-Z]">
+                            <input class="form-control" placeholder="Your Name" type="text" name="customername" >
                         </div>
                         <div class="info">
                             <label for="totalsales">Total Sales:</label>
-                            <input class="form-control" placeholder="Amount" type="text" name="totalsales" pattern="[0-9]">
+                            <input class="form-control" placeholder="Amount" type="text" name="totalsales">
                         </div>
                         <div class="selector">
                             <label for="country">Country:</label>
-                            <select class="form-control" id="country">
+                            <select class="form-control country" name="country">
                                 <option value="select">Select</option>
+                                <?php             
+                                    $result = mysqli_query($conn,"SELECT * FROM countries");
+                                    while($row = mysqli_fetch_array($result)) {
+                                ?>
+                                <option value="<?php echo $row['id'];?>"><?php echo $row["name"];?></option>
+                                <?php } ?>
                             </select>
                             <label for="state">State:</label>
-                            <select class="form-control" id="state">
-                                <option value="select">Select</option>
+                            <select class="form-control state" name="state">
+                                
                             </select>
                             <label for="city">City:</label>
-                            <select class="form-control " id="city">
-                                <option value="select">Select</option>
+                            <select class="form-control city" name="city">
+                                
                             </select>
                         </div>
                         <div class="uploadinfo">
@@ -54,8 +61,9 @@
                             <label for="invoicedate">Invoice Date</label>
                             <input class="form-control" type="date" name="invoicedate"> 
                         </div>
+                        
                         <div>
-                            <button class="btn btn-default submitbutton">Submit</button>
+                            <button class="btn btn-default submitbutton" name="submit">Submit</button>
                         </div>
                     </form>
                 </div>
