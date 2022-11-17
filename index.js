@@ -1,4 +1,4 @@
-alert("This is this hell");
+
 $(document).ready(function(){
     
     $(".upper").fadeOut(3000);
