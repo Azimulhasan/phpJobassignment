@@ -34,13 +34,36 @@ label{
 .upper {
     overflow: hidden;
     height: 60px;
+    animation: 2s moveup 1s ease-in;
+    display: fixed;
     
-  }
+}
+@keyframes moveup {
+    0%{
+        transform: translateY(0px)
+    }
+    100%{
+        transform: translateY(-500px)
+    }
+}
 .lower{ 
    
     height: 55px;
     overflow: hidden;
+    position: static;
+    top:100px;
+    animation: 2s movedown 1s ease-in;
+    display: fixed;
     transform: rotate(180deg);
+    margin-bottom: -100px;
+}
+@keyframes movedown {
+    0%{
+        transform: translateY(0px)
+    }
+    100%{
+        transform: translateY(500px)
+    }
 }
 .rotate{
     transform: rotate(180deg);
